@@ -76,7 +76,7 @@ $query = mysqli_query($link, "SELECT * from boletas
 
                     $sql_update = mysqli_query($link,"UPDATE boletas 
                                                      SET boleta_estado_boleta_estado_id = '3'
-                                                     WHERE boc = '$dataBoc';
+                                                     WHERE boc = '$dataBoc' AND NOT boleta_estado_boleta_estado_id = '5' ;
                                                   ");            							
                 }           
             }

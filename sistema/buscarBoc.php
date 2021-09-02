@@ -29,7 +29,7 @@ if ($_GET) {
      INNER JOIN `boletas`  ON `boletas_descripcion`.`boc` = `boletas`.`boc` 
      INNER JOIN `usuarios`  ON `boletas`.`Usuarios_legajo_usuario` = `usuarios`.`legajo_usuario` 
      INNER JOIN `articulos`  ON `boletas_descripcion`.`Articulos_sap_articulo` = `articulos`.`sap_articulo` 
-     WHERE  boletas.boc = '$busqueda' 
+     WHERE  boletas.boc = '$busqueda' AND NOT boleta_estado_boleta_estado_id = '5'
      LIMIT 50
            ");
 
@@ -130,12 +130,12 @@ if ($_GET) {
                         <h6><?php echo $nombre . " " . $apellido; ?></h6>
                         <h6>Fecha: <?php echo $newDate; ?></h6>
                         </p>
-                        <div>
+                        <div class="m-1 p-1 text-center align-items-center">
                             
-                                <button class="btn btn-secondary" onclick="location.href='detalleBoc.php?boc= <?php echo $boc; ?>'"> Detalles</button>
-                                <button class="btn btn-success" onclick="location.href='editar_boc.php?boc=<?php echo $boc; ?>'"> Editar</button>
-                                <button class="btn btn-danger" onclick="location.href='eliminar_confirmar_boc.php?boc=<?php echo $boc; ?>'"> Entregar</button>
-                           
+                                <button class="btn btn-primary" onclick="location.href='detalleBoc.php?boc= <?php echo $boc; ?>'"> Detalles</button>
+                                <button class="btn btn-secondary" onclick="location.href='editar_boc.php?boc=<?php echo $boc; ?>'"> Editar</button>
+                                <button class="btn btn-success" onclick="location.href='eliminar_confirmar_boc.php?boc=<?php echo $boc; ?>'"> Entregar</button>
+                                <button class="btn btn-danger" onclick="location.href='eliminar_confirmarb_boc.php?boc=<?php echo $boc; ?>'"> Borrar</button>
                             
                         </div>
                         
@@ -145,9 +145,13 @@ if ($_GET) {
             <?php
         } else {
 
-            //hacer un html con el error 
+            
+                header("Status: 301 Moved Permanently");
+                header("Location: sinResultados.php");
+                exit;
 
-            echo "<h1>No se encontraron resultados</h1>";
+
+            
         }
 
 

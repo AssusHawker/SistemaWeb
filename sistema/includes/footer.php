@@ -20,6 +20,6 @@
 		">
 
 
-		<span class="copyright">&copy; <?php echo date('Y') ?> Sistema Web V 0.0.1 - Desarrollado para EASY E152 por <a target="_blank" href="http://www.linkedin.com/in/marcos-popovich">Marcos Popovich</a> </span> 
+		<span class="copyright">&copy; <?php echo date('Y') ?> Sistema Web V 1.0.0 - Desarrollado para EASY E152 por <a target="_blank" href="http://www.linkedin.com/in/marcos-popovich">Marcos Popovich</a> </span> 
 	</div>
 </div>
