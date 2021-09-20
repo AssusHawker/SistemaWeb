@@ -100,7 +100,13 @@ if ($_GET) {
 										<td><?php echo $data["fecha_bol"]; ?></td>
 										<td><?php echo $data["nombre_usuario"] . " " . $data["apelli_usuario"]; ?></td>
 										<td> 
+										<button class="btn btn-primary" onclick="location.href='detalleBoc.php?boc= <?php echo $data["boc"]; ?>'"> Detalles</button>
+									|
 									 <button class="btn btn-success" onclick="location.href='editar_boc.php?boc=<?php echo  $data["boc"]; ?>'"> Editar</button>
+									 |
+									 <button class="btn btn-danger" onclick="location.href='eliminar_confirmarb_boc.php?boc=<?php echo $data["boc"]; ?>'"> Borrar</button>
+									
+									
 									
 									</td>
 								
@@ -123,51 +129,11 @@ if ($_GET) {
                                                              WHERE  boc = $boletaid
                                                               ");
 									?>
-										<tr style="color: black ; font-weight: bold; background-color: #eeeded; ">
-											<td></td>
-											<td></td>
-											<td>SAP</td>
-											<td>Descripcion</td>
-											<td>Cantidad</td>
-											<td>Imagen</td>
-										</tr>
+									
 
-										<?php
+									
 
-										while ($data2 = mysqli_fetch_array($query2)) {
-
-
-										?>
-
-											<!-- tabla -->
-
-
-
-											<tr>
-												<td></td>
-												<td></td>
-												<td><?php echo $data2["Articulos_sap_articulo"]; ?></td>
-												<td><?php echo $data2["descr_articulo"]; ?></td>
-												<td><?php echo $data2["cantidad_articulos"]; ?></td>
-												<td>
-													<!-- Inicio de la busqueda de Imagen -->
-													<?php $img = imagen($data2["Articulos_sap_articulo"]); ?>
-													<img height="100" width="100" src=" <?php echo $img; ?> "> <!-- Fin de la busqueda de imagen -->
-												</td>
-											</tr>
-
-
-											<!-- FIN TABLA -->
-
-
-
-
-
-
-
-
-
-										<?php  }  ?>
+										
 
 
 

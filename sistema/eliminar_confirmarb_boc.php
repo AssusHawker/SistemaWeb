@@ -11,12 +11,15 @@ if (!$_GET){
 
 if (!empty($_POST)) {
 	$boc = $_POST['boc'];
-	$query_delete = mysqli_query($link, "UPDATE boletas 
-	SET boleta_estado_boleta_estado_id = 5
-	 WHERE boc = $boc ");
-	mysqli_close($link);
-	if ($query_delete) {
-		$alert = '<div class="alert alert-success text-center" role="alert"> <h3>Boc Borrado</h3> </div>';
+	$query_delete = mysqli_query($link, "DELETE FROM `boletas_descripcion` WHERE boc = $boc;
+	");
+	$query_delete2 = mysqli_query($link, "DELETE FROM `boletas` WHERE boc = $boc;
+   ");
+   mysqli_close($link);
+   if ($query_delete && $query_delete2) {
+
+
+		$alert = '<div class="alert alert-danger text-center" role="alert"> <h3>Boc Borrado</h3> </div>';
 	}
 }
 
@@ -36,7 +39,7 @@ $idboleta = $_GET['boc'];
 	
 	?>
 	
-	<title>Borrar Boc?</title>
+	<title>Borrar Boc</title>
 </head>
 
 <body>
@@ -45,8 +48,8 @@ $idboleta = $_GET['boc'];
 	?>
 	<div class="row justify-content-center align-items-center">
 			<div class="card w-25 justify-content-center align-items-center m-3 rounded shadow-lg">
-				<div class="card-header w-100">
-					<h3>Borrar Boc?</h3>
+				<div class="card-header w-100 ">
+					<h3>Borrar</h3>
 				</div>
 				<div class="card-body">
 					<img src="img/borrar_boleta.png" alt="Borrar Usuario" class="w-100 mx-auto d-block">

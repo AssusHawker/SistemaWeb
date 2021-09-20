@@ -30,6 +30,10 @@ if (!empty($_GET)) {
 
 			<h2>BOC N° <?php echo $boc; ?> </h2>
 			<button class="btn btn-primary" onclick="location.href='index.php'"> Volver</button>
+			|
+			<button class="btn btn-success" onclick="location.href='editar_boc.php?boc=<?php echo  $boc; ?>'"> Editar</button>
+			|
+			<button class="btn btn-danger" onclick="location.href='eliminar_confirmarb_boc.php?boc=<?php echo  $boc; ?>'"> Borrar</button>
 			<?php 
 			
 			$query = mysqli_query($link, " SELECT
