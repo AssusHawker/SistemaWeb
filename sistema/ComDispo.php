@@ -27,12 +27,6 @@ if (!empty($_POST["boc"])){
             </script>";
  
    
-}elseif($resultado == 0){
-  echo "<script>
-  var botonEnviar = document.getElementById('boton');
-  botonEnviar.disabled = false;
-  </script>";
-
 }
 }
 

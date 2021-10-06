@@ -26,7 +26,9 @@ session_start();
 	<div class="row justify-content-center align-items-center" style="height: 100px;">
 	<div class="bg-light border rounded shadow col-5 justify-content-center align-items-center ">
 		<form action="buscarBoc.php" method="get" autocomplete="off" class="form-inline">
-		<h3 class="p-1 m-1 col-md-12">Buscar boc</h3>
+		
+		  <h3 class=" m-1 col-md-12" style="text-align: center;">Busqueda de Boc</h3>
+		
 			<div class="input-group">
 				<div class="input-group-prepend">
 					<div class="input-group-text bg-light p-3 m-3 rounded shadow">
@@ -57,7 +59,7 @@ session_start();
 		<div id="hidden_div" style="display: none; height: 150px;" class="bg-light border rounded shadow col-5 justify-content-center align-items-center mt-5">
 
 			<form action="buscar-ubicacion.php" method="get" autocomplete="off" class="form-inline">
-				<h3 class="p-1 m-1 col-md-12">Buscar por ubicacion</h3>
+				<h3 class="p-1 m-1 col-md-12" style="text-align: center;">Buscar por ubicacion</h3>
 				<div class="row bg-light col-12" style="display: flex; justify-content: center;" >
 					<div class="col-4">
 

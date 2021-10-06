@@ -67,12 +67,12 @@
         </li>
       <?php } ?>
 
-      <li class="nav-item dropdown ml-2 pl-2">
+      <!-- <li class="nav-item dropdown ml-2 pl-2">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Dashboard
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="registro_usuario.php"><i class="fas fa-user-plus"></i> Ejemplo</a>
+          <a class="dropdown-item" href="registro_usuario.php"><i class="fas fa-user-plus"></i> Ejemplo</a> -->
 
           <?php
           if ($_SESSION['rol'] == 2) {  ?>

@@ -94,31 +94,36 @@ if ($_GET) {
                 <!-- Titulo de la web -->
                 <title>Sistema WEB Boc N° <?php echo $boc; ?></title>
 
-
+              
             </head>
 
-            <body>
+            <body style="background-color: #494644 ;">
                 <?php include "includes/header.php"; ?>
 
+            <div class="container w-100">
 
-
-                <div class="card <?php echo $color; ?> border-secondary m-3" style="max-width: 28rem;">
-                    <div class="card-header text-white">
-                        <h2>BOC N° <?php echo $boc; 
+                <div class="card <?php echo $color; ?> border-secondary m-3" style="width: 35%;
+              box-shadow: -15px 8px 30px 1px rgba(0,0,0,0.76);
+-webkit-box-shadow: -15px 8px 30px 1px rgba(0,0,0,0.76);
+-moz-box-shadow: -15px 8px 30px 1px rgba(0,0,0,0.76);
+        
+                ">
+                    <div class="card-header text-white"> 
+                        <h1>BOC N° <?php echo $boc; 
                          if ($estado == 4){
                             echo " - ENTREGADO";
                         }
                     
-                        ?> </h2>
+                        ?> </h1>
                     </div>
                     <div class="card-body bg-light text-black">
-                        <h5 class="card-title bg-light"> <?php echo $contador->format($differenceFormat) . " Dias"; 
+                        <h5 class="card-title bg-light"> <?php echo "Creado hace: ". $contador->format($differenceFormat)." dias."; 
                            
                         ?> 
                         </h5>
                         <hr>
                         <h5>Ubicacion: </h5>
-                        <h3> <?php echo $pasillo . "-" . $metro . "-" . $ubicacion; ?> </h3>
+                        <h2> <?php echo $pasillo . "-" . $metro . "-" . $ubicacion; ?> </h2>
                         <hr>
                         <h5>Comentarios: </h5>
                         <span> <?php echo $comentarios; ?> </span>
@@ -132,16 +137,16 @@ if ($_GET) {
                         </p>
                         <div class="m-1 p-1 text-center align-items-center">
                             
-                                <button class="btn btn-primary" onclick="location.href='detalleBoc.php?boc= <?php echo $boc; ?>'"> Detalles</button>
-                                <button class="btn btn-secondary" onclick="location.href='editar_boc.php?boc=<?php echo $boc; ?>'"> Editar</button>
-                                <button class="btn btn-success" onclick="location.href='eliminar_confirmar_boc.php?boc=<?php echo $boc; ?>'"> Entregar</button>
-                                <button class="btn btn-danger" onclick="location.href='eliminar_confirmarb_boc.php?boc=<?php echo $boc; ?>'"> Borrar</button>
+                                <button class="btn btn-primary" onclick="location.href='detalleBoc.php?boc= <?php echo $boc; ?>'">Detalles</button>
+                                <button class="btn btn-secondary" onclick="location.href='editar_boc.php?boc=<?php echo $boc; ?>'">Editar&nbsp;&nbsp;</button>
+                                <button class="btn btn-success" onclick="location.href='eliminar_confirmar_boc.php?boc=<?php echo $boc; ?>'">Entregar</button>
+                                <button class="btn btn-danger" onclick="location.href='eliminar_confirmarb_boc.php?boc=<?php echo $boc; ?>'">Borrar&nbsp;&nbsp;</button>
                             
                         </div>
                         
                     </div>
                 </div>
-
+            </div>
             <?php
         } else {
 
@@ -283,6 +288,8 @@ if ($_GET) {
 
 
             ?>
+            <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
                 </body>
 
                 </html>

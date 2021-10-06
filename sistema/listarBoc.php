@@ -100,11 +100,11 @@ if ($_GET) {
 										<td><?php echo $data["fecha_bol"]; ?></td>
 										<td><?php echo $data["nombre_usuario"] . " " . $data["apelli_usuario"]; ?></td>
 										<td> 
-										<button class="btn btn-primary" onclick="location.href='detalleBoc.php?boc= <?php echo $data["boc"]; ?>'"> Detalles</button>
+										<button class="btn btn-primary" onclick="location.href='detalleBoc.php?boc= <?php echo $data["boc"]; ?>'">Detalles</button>
 									|
-									 <button class="btn btn-success" onclick="location.href='editar_boc.php?boc=<?php echo  $data["boc"]; ?>'"> Editar</button>
+									 <button class="btn btn-success" onclick="location.href='editar_boc.php?boc=<?php echo  $data["boc"]; ?>'">Editar&nbsp;&nbsp;</button>
 									 |
-									 <button class="btn btn-danger" onclick="location.href='eliminar_confirmarb_boc.php?boc=<?php echo $data["boc"]; ?>'"> Borrar</button>
+									 <button class="btn btn-danger" onclick="location.href='eliminar_confirmarb_boc.php?boc=<?php echo $data["boc"]; ?>'">Borrar&nbsp;&nbsp;</button>
 									
 									
 									

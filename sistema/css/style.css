@@ -3,6 +3,9 @@
     font-family: 'segoe ui' , 'cslibri' , 'verdana', 'sans-serif';
 }
 
+h3 {
+    text-align: center;
+}
 
 .close {
     width: 25px;
