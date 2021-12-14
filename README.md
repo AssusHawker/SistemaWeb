@@ -7,6 +7,7 @@
 
 ### El sistema permite manejar productos de bodega de venta web 
 Tiene usuarios con distintos privilegios
+El sistema se usa en red interna
 Fechado de vida de cada pedido y un semáforo con estados:
 ```
 #de 0 a 6 días => el producto esta en estado VERDE a la espera que lo retiren
